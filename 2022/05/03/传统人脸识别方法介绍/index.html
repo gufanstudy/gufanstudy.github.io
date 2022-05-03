@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>传统人脸识别方法介绍 | 顾のEvery Day</title><meta name="keywords" content="人脸识别"><meta name="author" content="顾のEvery Day"><meta name="copyright" content="顾のEvery Day"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="基于几何特征的方法基于几何特征的方法是最早、最传统的方法，该方法是通过提取人脸的几何特征，包括人脸部件的归一化的点间距离、比率以及人脸的一些特征点，如眼角、嘴角、鼻尖等部位所构成的二维拓扑结构进行识别的方法。主要代表是MIT的Bruelli和Poggio小组,他们采用改进的积分投影法提取出用欧氏距离表征的35维人脸特征矢量用于模式分类。几何特征方法利用的是单纯的几何信息，其优点是所需的存储空间和分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="传统人脸识别方法介绍">
+<meta property="og:url" content="http://gufanstudy.github.io/2022/05/03/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/index.html">
+<meta property="og:site_name" content="顾のEvery Day">
+<meta property="og:description" content="基于几何特征的方法基于几何特征的方法是最早、最传统的方法，该方法是通过提取人脸的几何特征，包括人脸部件的归一化的点间距离、比率以及人脸的一些特征点，如眼角、嘴角、鼻尖等部位所构成的二维拓扑结构进行识别的方法。主要代表是MIT的Bruelli和Poggio小组,他们采用改进的积分投影法提取出用欧氏距离表征的35维人脸特征矢量用于模式分类。几何特征方法利用的是单纯的几何信息，其优点是所需的存储空间和分">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2022-05-03T04:47:35.000Z">
+<meta property="article:modified_time" content="2022-05-03T05:18:11.622Z">
+<meta property="article:author" content="顾のEvery Day">
+<meta property="article:tag" content="人脸识别">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://gufanstudy.github.io/2022/05/03/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '传统人脸识别方法介绍',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-05-03 13:18:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">顾のEvery Day</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">传统人脸识别方法介绍</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-05-03T04:47:35.000Z" title="发表于 2022-05-03 12:47:35">2022-05-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-03T05:18:11.622Z" title="更新于 2022-05-03 13:18:11">2022-05-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="传统人脸识别方法介绍"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="基于几何特征的方法"><a href="#基于几何特征的方法" class="headerlink" title="基于几何特征的方法"></a>基于几何特征的方法</h3><p>基于几何特征的方法是最早、最传统的方法，该方法是通过提取人脸的几何特征，包括人脸部件的归一化的点间距离、比率以及人脸的一些特征点，如眼角、嘴角、鼻尖等部位所构成的二维拓扑结构进行识别的方法。主要代表是MIT的Bruelli和Poggio小组,他们采用改进的积分投影法提取出用欧氏距离表征的35维人脸特征矢量用于模式分类。几何特征方法利用的是单纯的几何信息，其优点是所需的存储空间和分类时间代价比较小，而且在图像分辨率较低的情况下仍然可以使用。缺点是识别的准确率完全依赖于几何特征的准确提取，而几何特征本身容易受姿态和表情变化的影响，稳定性不高。即使几何特征提取准确，仍然可能因为有较大的变化而导致分类错误。因此，目前单纯利用几何特征的人脸识别方法已经不常使用了，但几何特征仍然可以作为其它特征的有益补充。</p>
+<blockquote>
+<p>优点：</p>
+<p>所需存储空间和分类时间代价比较小</p>
+<p>在图像分辨率低的情况下也可以使用</p>
+</blockquote>
+<blockquote>
+<p>缺点：</p>
+<p>不稳定</p>
+<p>精度完全依赖几何特征的准确提取，容易受人脸的姿态和表情影响目前很少单独使用</p>
+<p>往往作为其他特征的补充</p>
+</blockquote>
+<h3 id="基于模板匹配的方法"><a href="#基于模板匹配的方法" class="headerlink" title="基于模板匹配的方法"></a>基于模板匹配的方法</h3><p>模板匹配的方法是模式识别中所采用方法中最传统的方法之一，该方法主要是利用计算模板和图像灰度的自相关性来实现识别功能的。主要代表是Yuille,他采用弹性模板来提取眼睛和嘴巴的轮廓。在人脸识别问题中，模板既可以是整个人脸图像构成的单-模板，也可以是不同局部特征子图像构成的多个模板的组合。分类时，将待识别图像与所有已知图像进行匹配，根据最终匹配得分进行分类。Brunelli 在1993 年对基于几何特征的方法和模板匹配的方法进行了较全面的介绍和比较后认为,模板匹配的方法优于几何特征的方法.但是，模板匹配的方法由于利用了相关性信息，对光照、旋转和表情变化比较敏感。另外，模板匹配的计算量比较大，多尺度、多模板的使用会增加计算和存储的复杂度。</p>
+<blockquote>
+<p>优点：</p>
+<p>优于几何特征信息</p>
+</blockquote>
+<blockquote>
+<p>缺点：</p>
+<p>由于利用了相关信息，对光照、旋转和表情变化比较敏感</p>
+<p>计算量大，在多尺度、多模板的情况下会增加计算和存储的复杂性</p>
+</blockquote>
+<h3 id="基于统计的方法"><a href="#基于统计的方法" class="headerlink" title="基于统计的方法"></a>基于统计的方法</h3><p>基于统计的方法是现代人脸识别方法中比较经典且常见的，包括特征脸Eganc方法和隐马尔可夫模型(iden Mantov Mole等方法。基于统计的方法将人险用代数特征矢量表示。这类方法利用统计策略从整个训练图像集合提取统计特征后，通过匹配学习找出人脸和非人脸以及不同人脸之间的联系，并不要求单独抽取眼睛、鼻子等面部特征，从原理上更为先进合理，实验中也表现出更好的识别效果。</p>
+<h4 id="——K-L变换的特征脸"><a href="#——K-L变换的特征脸" class="headerlink" title="——K-L变换的特征脸"></a>——K-L变换的特征脸</h4><p>特征脸方法,也称为主分量分析(PCA)方法。srvich和Kiby)首先将K-L变换用于人脸图像的最优表示，Turk 受其启发，将包含人脸的图像区域看作是一种随机向量， 通过KL变换获得其正交基底，并利用重构权向量作为识别用的特征，从而提出了“特征脸”方法。该方法具有简单有效的特点，目前已成为事实上的基准测试算法。本文的第三章将重点讨论此方法的具体应用。特征脸方法的重要贡献不仅在于它为基于图像的目标识别提供了一一种普遍的方法， 而且降维和特征提取这种思想为目标识别提供了- -种方法论。但是在人脸识别问题上，它的不足之处是受表情变化、光照角度、强度变化和视角变化等严重影响，鲁棒性较差。因此,研究者在此基础上发展了许多改进方案，如Behumer提出的Fisher脸方法,特征半脸方法四等。</p>
+<blockquote>
+<p>优点：</p>
+<p>简单有效</p>
+</blockquote>
+<blockquote>
+<p>缺点：</p>
+<p>鲁棒性差，易受表情、光照、角度等因素影响</p>
+</blockquote>
+<h4 id="——隐马尔可夫模型"><a href="#——隐马尔可夫模型" class="headerlink" title="——隐马尔可夫模型"></a>——隐马尔可夫模型</h4><p>隐马尔可夫模型是用于描述信号统计特征的一组统计模型， 作为一种语音识别的方法取得了很好的效果。近年来越来越多的研究工作者将这种方法运用到人脸识别当中。Samaria,叫最早建议了关于人脸的一维隐马尔可夫模型，他用一个矩形窗从上到下采样人脸图像,用灰度值作为观察序列.Netan发展了Samria的方法，用39个2D-0T系数代替灰度值作为观察序列，在一定程度上解决了Samaria方法要求大存储空间的不足。并且有效地提高了识率。</p>
+<blockquote>
+<p>优点：</p>
+<p>在一定程度上解决了Samaria方法要求大存储空间的不足。并且有效地提高了识率。</p>
+</blockquote>
+<h3 id="基于链接机制的方法"><a href="#基于链接机制的方法" class="headerlink" title="基于链接机制的方法"></a>基于链接机制的方法</h3><p>基于连接机制的方法，包括一般的神经网络(Neural Network)方法和弹性图匹配(Elastic Graph Matching)方法21。基于神经网络的方法是最近几年比较活跃的一个研究方向。神经网络由于其固有的并行运算机制以及对于模式的分布式全局存储，在人脸识别上比其它类别的方法有独到的优势，它避免了复杂的特征提取作，通过学习的过程获得其它方法难以实现的关于人脸识别规律和规则的隐性表达，而且不受模式形变的影响。最早应用神经网络进行人脸识别工作的Kohonen,利用网络的联想能力回忆人脸，当输入图像噪音很多或部分图像丢失时，也能回忆出准确的人脸。但是该方法通常将人脸作为一个- -维向量输入，如一幅不大100x100的图像为10000维，这样神经网络的输入节点将很庞大，因此实际训练网络的时候参数繁多，实现起来很困难。同时该方法要求训练样本比较充分才能得到较好的识别效果，否则在光照、尺度变化以及小的形变情况下都不能很好地识别。</p>
+<h4 id="——动态链接的弹性图匹配"><a href="#——动态链接的弹性图匹配" class="headerlink" title="——动态链接的弹性图匹配"></a>——动态链接的弹性图匹配</h4><p>弹性图匹配方法是一-种基于动态链接结构的方法。该方法在二维空间中定义了一种对 于通常的人脸变形具有一定的不变性的距离，并采用属性拓扑图来代表人脸，拓扑图的任一项点均包含特征向量，用来记录人脸在该项点位置附近的特征信息，然后利用弹性匹配法将库中人脸和待识别人脸的弹性图进行匹配，找到匹配程度最高的一个人脸图像。该方法结合了灰度特性和几何因素，在匹配时允许图像存在弹性形变，对人脸较小角度的旋转、表情以及光照变化等都有较好的容忍性，但是与特征脸识别方法相比识别速度较慢。</p>
+<blockquote>
+<p> 优点：</p>
+<p>结合了灰度特性和几何因素，允许图像存在形变，对小角度旋转、表情和光照变化有较好的容忍性</p>
+</blockquote>
+<blockquote>
+<p>缺点：识别速度较慢</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">顾のEvery Day</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://gufanstudy.github.io/2022/05/03/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/">http://gufanstudy.github.io/2022/05/03/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://gufanstudy.github.io" target="_blank">顾のEvery Day</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/">人脸识别</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">顾のEvery Day</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/gufanstudy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/gufanstudy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2081982022@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E5%87%A0%E4%BD%95%E7%89%B9%E5%BE%81%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">基于几何特征的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%A8%A1%E6%9D%BF%E5%8C%B9%E9%85%8D%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">基于模板匹配的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E7%BB%9F%E8%AE%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">基于统计的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%94%E2%80%94K-L%E5%8F%98%E6%8D%A2%E7%9A%84%E7%89%B9%E5%BE%81%E8%84%B8"><span class="toc-number">3.1.</span> <span class="toc-text">——K-L变换的特征脸</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%94%E2%80%94%E9%9A%90%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.2.</span> <span class="toc-text">——隐马尔可夫模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E9%93%BE%E6%8E%A5%E6%9C%BA%E5%88%B6%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">基于链接机制的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%80%94%E2%80%94%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E7%9A%84%E5%BC%B9%E6%80%A7%E5%9B%BE%E5%8C%B9%E9%85%8D"><span class="toc-number">4.1.</span> <span class="toc-text">——动态链接的弹性图匹配</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/05/03/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/" title="传统人脸识别方法介绍"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="传统人脸识别方法介绍"/></a><div class="content"><a class="title" href="/2022/05/03/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/" title="传统人脸识别方法介绍">传统人脸识别方法介绍</a><time datetime="2022-05-03T04:47:35.000Z" title="发表于 2022-05-03 12:47:35">2022-05-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 顾のEvery Day</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
