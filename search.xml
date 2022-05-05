@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Python爬虫(一):学习路线</title>
+      <link href="/2022/05/06/Python%E7%88%AC%E8%99%AB(%E4%B8%80)%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
+      <url>/2022/05/06/Python%E7%88%AC%E8%99%AB(%E4%B8%80)%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</url>
+      
+        <content type="html"><![CDATA[<h2 id="学习路线"><a href="#学习路线" class="headerlink" title="学习路线"></a>学习路线</h2><blockquote><p>打铁还需自身硬</p><p>前置要求：掌握Python基础知识</p></blockquote><ul><li><p>知识点+案例 为驱动</p></li><li><p>第一阶段：爬虫核心</p><ul><li><p>爬虫的前导知识</p></li><li><p>爬虫网络请求模块（uellib requests）</p></li><li><p>数据解析（正则 xpath bas4）</p></li></ul></li><li><p>第二阶段：爬虫进阶</p><ul><li><p>selenium(自动化的测试工具)</p></li><li><p>动态数据</p></li><li><p>多线程</p></li><li><p>增加爬取的效率</p></li><li><p>队列</p></li></ul></li><li><p>第三阶段：Scrapy框架和分布式爬虫</p><ul><li>如何使用Scrapy框架</li><li>分布式爬虫工作流程以及如何把一个普通的爬虫改写成分布式爬虫</li></ul></li><li><p>第四阶段：数据存储</p><ul><li>CSV</li><li>redis</li><li>mongodb（重点）</li></ul></li><li><p>第五阶段：移动开发</p><ul><li>前导知识（Android）（mainactivity listview textview）</li><li>fiddler抓包工具</li><li>爬取移动端数据</li></ul></li><li><p>第六阶段：反爬策略</p><ul><li>字体反爬</li><li>代理IP（免费代理IP 失效率低 响应慢）（购买IP）</li><li>复杂验证码（图片验证 tessertact 行为验证 打码平台）</li><li>JS反爬（门槛相当高 起码掌握JS基础 分析维度比较高 案例 总结套路 常见算法了解）</li></ul></li></ul><blockquote><p>PS：</p><p>​懂了</p><p>​不代表会了</p></blockquote><blockquote><p>学习方法：</p><p>​百度  未知的 不明确的 找资料</p><ul><li>准备报错集</li><li>解决方案文档</li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 爬虫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>传统人脸识别方法介绍</title>
       <link href="/2022/05/03/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/"/>
       <url>/2022/05/03/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D/</url>
