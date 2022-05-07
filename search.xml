@@ -4,7 +4,34 @@
   
     
     <entry>
-      <title>Python爬虫(一):学习路线</title>
+      <title>Python爬虫(二)：前导知识</title>
+      <link href="/2022/05/07/Python%E7%88%AC%E8%99%AB(%E4%BA%8C)%E5%89%8D%E5%AF%BC%E7%9F%A5%E8%AF%86/"/>
+      <url>/2022/05/07/Python%E7%88%AC%E8%99%AB(%E4%BA%8C)%E5%89%8D%E5%AF%BC%E7%9F%A5%E8%AF%86/</url>
+      
+        <content type="html"><![CDATA[<h4 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h4><ul><li>每个应用程序都有自己的独立标识，那么这个表示我们称之为端口</li></ul><h4 id="通讯协议"><a href="#通讯协议" class="headerlink" title="通讯协议"></a>通讯协议</h4><ul><li>国际组织定义了通讯协议 TCP&#x2F;IP协议</li><li>所谓协议就是计算机共同遵守的规定或规则</li><li>HTTP协议（超文本传输协议）（一种通讯协议）（端口号：80）</li></ul><h4 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h4><ul><li>HTTPS &#x3D; HTTP + SSL （端口：443）（以安全为目标的HTTP通道）</li></ul><h4 id="HTTP的请求和响应"><a href="#HTTP的请求和响应" class="headerlink" title="HTTP的请求和响应"></a>HTTP的请求和响应</h4><p>General 全部的</p><p>Request URL 请求的地址</p><p>Request Method 请求方法，一般情况下网站上是什么方式，爬虫代码就写什么请求方式，但是具体情况具体分析</p><p>Status Code 状态码</p><p>如果是静态网页，数据都在源码里面</p><p>如果是动态网页，这个Request URL的去分析，查找response，去看响应结果</p><p>Response Header 服务器的响应</p><p>Request Headers 客户端的请求</p><blockquote><p>重要参数：</p><p>get 请求的方法 以及目标url参数 一般不加</p><p>Host 主机端口号、域名 可加可不加</p><p>Connection keep-alive 保持长连接 一般不加</p><p>Uer-Agent 用户代理 防止网站来检查ua 反反爬的第一步 加</p><p>Accept-Encoding 不要添加 数据会有问题</p><p>Cookie 记录用户相关信息（加不加视情况而定）（有时间限制）</p><p>referer  表明当前页面从哪个页面过来 视情况而定 有时间限制</p></blockquote><p>Query String Parameters 参数 （在Payload页面下）</p><h4 id="爬虫介绍"><a href="#爬虫介绍" class="headerlink" title="爬虫介绍"></a>爬虫介绍</h4><h4 id="什么是爬虫"><a href="#什么是爬虫" class="headerlink" title="什么是爬虫"></a>什么是爬虫</h4><ul><li>简单一句话 就是代替人去模拟浏览器进行网页操作</li></ul><h4 id="为什么需要爬虫"><a href="#为什么需要爬虫" class="headerlink" title="为什么需要爬虫"></a>为什么需要爬虫</h4><ul><li><p>为其它的程序提供数据源（搜索引擎、应用）</p></li><li><p>数据分析</p><blockquote><p>快乐 采风 高校 风景 …… 种类 收藏 多少会有点不同 视频 你喜欢什么？ 数据—&gt;分析</p><p>抖音广告越来越多 直播带货非常火 原因是什么？</p><ul><li>流量大</li><li>变现</li><li>热度 非常活跃</li></ul></blockquote></li><li><p>人工智能</p><ul><li><p>学习人工智能（门槛太高）</p><blockquote><p>1.Python高级开发水平</p><p>2.数学基础</p></blockquote></li><li><p>科技公司 高等大学</p></li><li><p>智能家居 无人驾驶 人脸识别 智能语言……</p></li></ul></li><li><p>……</p></li></ul><h4 id="公司获取数据的方式"><a href="#公司获取数据的方式" class="headerlink" title="公司获取数据的方式"></a>公司获取数据的方式</h4><ul><li>公司自有的</li><li>第三方数据平台<ul><li>免费的 百度指数</li><li>付费的 数据堂</li></ul></li><li>爬虫爬取的数据</li></ul><h4 id="Python做爬虫的优势"><a href="#Python做爬虫的优势" class="headerlink" title="Python做爬虫的优势"></a>Python做爬虫的优势</h4><ul><li>PHP：对多线程、异步支持不太好</li><li>Java：代码量大、打码笨重</li><li>C&#x2F;C++：代码量大，难以编写</li><li>Python：支持模块多、代码简洁、开发效率高（scrapy框架）</li></ul><h4 id="爬虫分类"><a href="#爬虫分类" class="headerlink" title="爬虫分类"></a>爬虫分类</h4><ul><li>通用网络爬虫 例如 百度 谷歌</li><li>聚焦网络爬虫  根据既定的目标 有选择的抓取某一特定主题的内容</li></ul><h4 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h4><p>get和post方法</p><ul><li><p>get特点</p><blockquote><p>一般情况下只从服务器获取数据，没有对服务器产生影响，通常都是get请求</p><p>请求参数可以在url地址上显示出来</p></blockquote></li><li><p>post特点</p><blockquote><p>向服务器发送数据（登录、上传文件……）</p><p>会对服务器产生影响那么通常都是使用的是post请求</p><p>请求参数不会再url地址之上显示出来</p></blockquote></li></ul><h4 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h4><p>全球统一资源定位符</p><p><a href="https://gufanstudy.github.io/archives/">https://gufanstudy.github.io/archives/</a></p><blockquote><p>https 网络协议</p><p>gufanstudy.github.io 域名</p><p>archives&#x2F; 访问资源路径</p><p>anchor 锚点（前端页面定位）</p></blockquote><h4 id="User-Agent"><a href="#User-Agent" class="headerlink" title="User-Agent"></a>User-Agent</h4><p>User-Agent: Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;101.0.4951.54 Safari&#x2F;537.36</p><p>作用：记录了用户的浏览器，操作系统登，为了让用户更好的获取HTML页面效果</p><p>一般会作为反反爬的第一步，80%的网站都会检查</p><h4 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h4><p>记录用户相关的信息</p><p>http本身是无状态的，服务器无法判断用户的身份。对同一个网站发起多次请求，服务器无法判断是否来自同一个人</p><p>作用：</p><ul><li>反反爬</li><li>模拟登录</li></ul><h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>部分：</p><ul><li>200：请求成功</li><li>301：永久重定向</li><li>302：临时重定向</li><li>404：请求失败</li><li>500：服务器内部请求</li></ul><p>重定向：</p><p>一个网址定向到另一个网址</p><h4 id="抓包工具"><a href="#抓包工具" class="headerlink" title="抓包工具"></a>抓包工具</h4><p>谷歌浏览器自带，右键-检查 或 F12</p><p>Elements 元素</p><blockquote><p>网页源代码 最终渲染结</p><p>用于提取数据 分析数据</p></blockquote><p>Console 控制台</p><blockquote><p>后期分析JS代码，根据打印结果，分析代码</p><p>前期用不到</p></blockquote><p>Sources 资源</p><blockquote><p>信息的来源</p><p>整个网站加载的资源</p><p>分析JS代码时使用，调试，打断点</p><p>前期用不到</p></blockquote><p>Network 网络工作</p><blockquote><p>数据抓包</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 爬虫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python爬虫(一)：学习路线</title>
       <link href="/2022/05/06/Python%E7%88%AC%E8%99%AB(%E4%B8%80)%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"/>
       <url>/2022/05/06/Python%E7%88%AC%E8%99%AB(%E4%B8%80)%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</url>
       
