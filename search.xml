@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>报错集</title>
+      <link href="/2022/05/07/%E6%8A%A5%E9%94%99%E9%9B%86/"/>
+      <url>/2022/05/07/%E6%8A%A5%E9%94%99%E9%9B%86/</url>
+      
+        <content type="html"><![CDATA[<p>TypeError: urlopen() got an unexpected keyword argument ‘headers’</p><blockquote><p>urlopen()不支持headers参数</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 报错 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 报错 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python爬虫(二)：前导知识</title>
       <link href="/2022/05/07/Python%E7%88%AC%E8%99%AB(%E4%BA%8C)%E5%89%8D%E5%AF%BC%E7%9F%A5%E8%AF%86/"/>
       <url>/2022/05/07/Python%E7%88%AC%E8%99%AB(%E4%BA%8C)%E5%89%8D%E5%AF%BC%E7%9F%A5%E8%AF%86/</url>
